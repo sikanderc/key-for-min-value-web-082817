@@ -9,3 +9,18 @@ def key_for_min_value(name_hash)
   end.uniq
   name_hash.flatten[0]
 end
+
+=begin
+Solution way:
+def key_for_min_value(hash)
+  lowest_key = nil
+  lowest_value = nil
+  hash.each do |k, v|
+    if lowest_value == nil || v < lowest_value
+      lowest_value = v
+      lowest_key = k
+    end
+  end
+  lowest_key
+end
+=end
