@@ -6,6 +6,7 @@ def key_for_min_value(name_hash)
     lowest_name = name
     lowest_value = value
     name_hash.delete_if {|key, val| val > lowest_value }
+    lowest_name
   end.uniq
-  name_hash.flatten[0]
+  #name_hash.flatten[0]
 end
